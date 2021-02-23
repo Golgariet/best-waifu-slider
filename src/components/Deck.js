@@ -60,7 +60,17 @@ class Deck extends Component {
 }
 
 const styles = {
-  view_port: {},
+  view_port: {
+    margin: 0,
+    padding: 0,
+    width: "500px",
+    height: "300px",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    overflow: "hidden",
+  },
   images_container: {},
   touch_area: {},
 };
