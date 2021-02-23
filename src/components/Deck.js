@@ -4,7 +4,7 @@ import i1 from "./images/Kaeya.jpg";
 import i2 from "./images/keqing.jpg";
 import i3 from "./images/mona.jpg";
 import i4 from "./images/Xinyan.jpg";
-// import i5 from "./images/Diona";
+import i5 from "./images/Diona.jpg";
 
 class Deck extends Component {
   constructor(props) {
@@ -12,20 +12,20 @@ class Deck extends Component {
 
     this.state = {
       cards: [],
-      number_of_cards_by_index: 4,
+      number_of_cards_by_index: 5,
     };
   }
 
   componentDidMount() {
-    const new_cards = [i1, i2, i3, i4];
+    const new_cards = [];
 
-    // for (let i = 0; i <= this.state.number_of_cards_by_index; i++) {
-    //   new_cards.push(<Card import_img={i1 + 1} />);
-    // }
-
-    const images = new_cards.map((image) => {
-      return <img key={image} src={require(`./images/${image}`)} />;
-    });
+    for (let i = 0; i <= this.state.number_of_cards_by_index; i++) {
+      new_cards.push(<Card import_img={i1} />);
+      new_cards.push(<Card import_img={i2} />);
+      new_cards.push(<Card import_img={i3} />);
+      new_cards.push(<Card import_img={i4} />);
+      new_cards.push(<Card import_img={i5} />);
+    }
 
     this.setState({ cards: new_cards }, () => {});
   }
